@@ -17,7 +17,6 @@
     <updated>2026-04-18T00:00:00+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
-
   <locale xml:lang="id-ID">
     <terms>
       <term name="page" form="short">hal.</term>
@@ -31,7 +30,6 @@
       <term name="issue" form="short">No.</term>
     </terms>
   </locale>
-
   <macro name="author">
     <names variable="author">
       <name and="text" delimiter-precedes-last="never" initialize-with="." name-as-sort-order="all"/>
@@ -43,7 +41,6 @@
       </substitute>
     </names>
   </macro>
-
   <macro name="author-short">
     <names variable="author">
       <name form="short" and="text" delimiter=", " delimiter-precedes-last="never" initialize-with=". "/>
@@ -55,7 +52,6 @@
       </substitute>
     </names>
   </macro>
-
   <macro name="year-date">
     <choose>
       <if variable="issued">
@@ -70,7 +66,6 @@
       </else>
     </choose>
   </macro>
-
   <macro name="title">
     <choose>
       <if type="book thesis report graphic" match="any">
@@ -81,7 +76,6 @@
       </else>
     </choose>
   </macro>
-
   <macro name="container-title">
     <choose>
       <if variable="container-title">
@@ -89,14 +83,12 @@
       </if>
     </choose>
   </macro>
-
   <macro name="editor">
     <names variable="editor translator">
       <label form="short" suffix=" "/>
       <name and="text" initialize-with="." delimiter=", "/>
     </names>
   </macro>
-
   <macro name="publisher">
     <choose>
       <if type="thesis">
@@ -114,7 +106,6 @@
       </else>
     </choose>
   </macro>
-
   <macro name="locators">
     <choose>
       <if type="article-journal article-magazine">
@@ -131,14 +122,12 @@
       </if>
     </choose>
   </macro>
-
   <macro name="pages">
     <group delimiter=" ">
       <label variable="page" form="short"/>
       <text variable="page"/>
     </group>
   </macro>
-
   <citation et-al-min="3" et-al-use-first="1" disambiguate-add-year-suffix="true" collapse="year">
     <sort>
       <key macro="year-date"/>
@@ -154,7 +143,6 @@
       </group>
     </layout>
   </citation>
-
   <bibliography hanging-indent="true" entry-spacing="1">
     <sort>
       <key macro="author"/>
@@ -163,10 +151,8 @@
     <layout suffix=".">
       <text macro="author"/>
       <text macro="year-date" prefix=" (" suffix="), "/>
-
       <group delimiter=", ">
         <text macro="title"/>
-
         <choose>
           <if type="chapter paper-conference" match="any">
             <group delimiter=" ">
@@ -179,7 +165,6 @@
             <text macro="container-title"/>
           </else>
         </choose>
-
         <text macro="locators"/>
         <text macro="publisher"/>
         <text macro="pages"/>
